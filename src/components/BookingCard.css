@@ -1,9 +1,23 @@
 .name-container {
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .name-container h3 {
   margin-right: 5px;
   font-size: 15px;
+}
+
+.numTickets .tickets-text {
+  font-weight: bold;
+}
+
+.numTickets {
+  font-weight: bold;
+}
+
+.booking-card {
+  line-height: normal;
+  border: 1.5px solid lightgrey;
 }

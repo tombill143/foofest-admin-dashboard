@@ -10,20 +10,30 @@ const Create = () => {
   const [lastname, setLastname] = useState("");
   const [ticketHolders, setTicketHolders] = useState("");
   const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
   const [numTickets, setNumTickets] = useState("");
   const [formError, setFormError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!firstname || !lastname || !ticketHolders || email || !numTickets) {
+    if (
+      !firstname ||
+      !lastname ||
+      !ticketHolders ||
+      !email ||
+      !address ||
+      !numTickets
+    ) {
       setFormError("Please fill in all the fields correctly.");
       return;
     }
 
     const { data, error } = await supabase
       .from("bookings")
-      .insert([{ firstname, lastname, ticketHolders, numTickets }]);
+      .insert([
+        { firstname, lastname, ticketHolders, email, address, numTickets },
+      ]);
 
     if (error) {
       console.log(error);
@@ -67,6 +77,13 @@ const Create = () => {
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <label htmlFor="email">Address:</label>
+        <textarea
+          id="address"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
         />
 
         <label htmlFor="numTickets">Number of Tickets:</label>

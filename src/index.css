@@ -21,7 +21,7 @@ body {
   font-family: "Open Sans";
 }
 nav {
-  background: var(--primary);
+  background: grey;
   padding: 10px 20px;
   text-align: center;
 }
@@ -31,7 +31,7 @@ nav a {
   display: inline-block;
 }
 nav h1 {
-  color: #a6c196;
+  color: #a6f976;
 }
 .page {
   max-width: 1200px;
@@ -47,7 +47,7 @@ nav h1 {
 }
 .booking-card {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background: #a6c196;
   color: white;
   box-sizing: border-box;
@@ -58,14 +58,15 @@ nav h1 {
   position: absolute;
   top: -10px;
   right: -10px;
-  background: #b1de97;
-  color: #fff;
+  background: #00b850;
+  color: #ffffff;
   border-radius: 6px;
   width: 100px;
   height: 0;
   padding: 20px 0;
   line-height: 0px;
   text-align: center;
+  /*  border: 1px solid lightgrey; */
 }
 
 /* forms */
