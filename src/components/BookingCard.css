@@ -1,0 +1,9 @@
+.name-container {
+  display: flex;
+  align-items: center;
+}
+
+.name-container h3 {
+  margin-right: 5px;
+  font-size: 15px;
+}
